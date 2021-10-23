@@ -1,0 +1,97 @@
+.chatRoom {
+  display: grid;
+
+  align-items: center;
+  background-color: lightblue;
+  height: 100%;
+  min-height: 90vh;
+  width: 100%;
+
+  .chatRoom-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: lightgrey;
+  }
+
+  #User.message {
+    background-color: rgb(14, 209, 63);
+    border-radius: 12px;
+    width: calc(40% - 12px);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  #OtherUser.message {
+    margin-left: 10rem;
+    width: calc(40% - 12px);
+    background-color: rgb(240, 245, 247);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .chatRoom-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: calc(90vw - 0.7rem);
+    height: calc(80vh - 1rem);
+    overflow-y: scroll;
+
+    min-height: 10rem;
+    overflow-wrap: break-word;
+
+    .content {
+      font-size: clamp(0.5rem, 4vh, 2rem);
+    }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .scroll-container {
+      width: 100%;
+      height: 100%;
+      overflow-y: hidden;
+     
+    }
+  }
+
+  .chatRoom-body::-webkit-scrollbar,
+  .scroll-container::-webkit-scrollbar , .message::-webkit-scrollbar,.chatRoom::-webkit-scrollbar{
+    display: none;
+  }
+
+  .chatRoom-footer {
+    display: flex;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(185, 181, 181);
+    width: calc(90vw - 1rem);
+    height: 100%;
+
+    input[type="text"] {
+      border: 1px solid black;
+      outline: rgb(10, 10, 10) solid 2px;
+      height: calc(20% + 1rem);
+      width: calc(40vw - 3px);
+      margin: 0.2rem;
+    }
+
+    button {
+      height: calc(20% + 1.7rem);
+      width: calc(20vw + 0.1rem);
+    }
+  }
+}
